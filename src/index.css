@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Utility Classes  */
+.main-container {
+  max-width: 2000px;
+  margin-inline: auto;
+}
+
 body {
   font-family: "Poppins", sans-serif;
+}
+@media (min-width: 600px) {
+  .footer-column:nth-child(3) {
+    gap: 1rem;
+  }
+}
+.footer-link:after {
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  position: absolute;
+  transform: scaleX(0);
+  border-radius: 100vmax;
+  transform-origin: right;
+  background-color: white;
+  transition: transform 150ms ease-in-out;
+}
+.footer-link:hover::after {
+  transform: scale(1);
+  transform-origin: left;
 }
