@@ -7,7 +7,7 @@ export default function CTA() {
     <section className="relative overflow-hidden bg-[#3b3054] py-12 font-bold text-white">
       <div className="absolute inset-0">
         <picture>
-          <source media="(min-width: 600px)" srcset={bgImageDesktop} />
+          <source media="(min-width: 600px)" srcSet={bgImageDesktop} />
           <img
             className="h-full w-full"
             src={bgImageMobile}
