@@ -1,10 +1,12 @@
 import React from "react";
-import Footer from "./components/Footer";
+import CTA from "./components/CTA/CTA";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (
     <>
       <main>
+        <CTA />
         <Footer />
       </main>
     </>
