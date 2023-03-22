@@ -2,6 +2,7 @@ import React from "react";
 import Brand from "../assets/icon-brand-recognition.svg";
 import Records from "../assets/icon-detailed-records.svg";
 import Customized from "../assets/icon-fully-customizable.svg";
+import Shortener from "./Shortener/Shortener";
 
 const CardData = [
   {
@@ -25,8 +26,9 @@ const CardData = [
 
 export default function Cards() {
   return (
-    <div>
-      <div className="main-container bg-gray-100 py-24">
+    <div className="bg-gray-100">
+      <div className="main-container py-24">
+        <Shortener />
         <div className="grid gap-8">
           <div className="grid gap-4 text-center text-gray-800">
             <h2 className="text-3xl font-bold md:text-4xl">

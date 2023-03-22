@@ -33,3 +33,18 @@ body {
   transform: scale(1);
   transform-origin: left;
 }
+@media (max-width: 768px) {
+  .copy-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    width: 100%;
+    height: 1px;
+    background: rgb(231, 231, 231);
+  }
+}
+input:focus {
+  outline: 2px solid transparent;
+}
