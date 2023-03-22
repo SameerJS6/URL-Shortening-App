@@ -1,8 +1,8 @@
 import React from "react";
-import Brand from "../assets/icon-brand-recognition.svg";
-import Records from "../assets/icon-detailed-records.svg";
-import Customized from "../assets/icon-fully-customizable.svg";
-import Shortener from "./Shortener/Shortener";
+import Brand from "../../assets/icon-brand-recognition.svg";
+import Records from "../../assets/icon-detailed-records.svg";
+import Customized from "../../assets/icon-fully-customizable.svg";
+import Shortener from "../Shortener/Shortener";
 
 const CardData = [
   {

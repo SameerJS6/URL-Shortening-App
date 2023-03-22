@@ -1,14 +1,14 @@
 import React from "react";
-import Cards from "./components/Cards";
-import CTA from "./components/CTA/CTA";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Herosection from "./components/Hero/Herosection";
 
 export default function App() {
   return (
     <>
       <main>
-        <Cards />
-        <CTA />
+        <Navbar />
+        <Herosection />
         <Footer />
       </main>
     </>
