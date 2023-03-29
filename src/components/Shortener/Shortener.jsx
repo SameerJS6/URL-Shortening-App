@@ -91,8 +91,9 @@ export default function Shortener() {
                   onClick={handleClear}
                   className="rounded-md bg-red-500 py-3 px-6 text-lg font-bold text-white transition-all duration-300 ease-in-out hover:bg-red-400 hover:shadow-sm "
                   type="button"
+                  disabled={resultURL.length === 0}
                 >
-                  Clear All
+                  {resultURL.length > 1 ? "Clear All" : "Clear"}
                 </button>
               </div>
               <p
