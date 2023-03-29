@@ -27,7 +27,7 @@ const CardData = [
 export default function Cards() {
   return (
     <div className="bg-gray-100">
-      <div className="main-container py-24">
+      <div className="main-container p-4 py-24 lg:px-20 xl:px-32">
         <Shortener />
         <div className="grid gap-8">
           <div className="grid gap-4 text-center text-gray-800">

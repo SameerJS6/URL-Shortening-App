@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header
       data-overlay={isOpen ? "true" : "false"}
-      className="flex items-center justify-between"
+      className="flex items-center justify-between p-4 sm:p-6 sm:px-8 lg:p-8 lg:px-20"
     >
       <div>
         <img src={Logo} alt="Main Logo" />

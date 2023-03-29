@@ -7,7 +7,7 @@ export default function Herosection() {
   return (
     <>
       <div>
-        <div className="main-contianer p-4 lg:px-32">
+        <div className="main-contianer p-4 lg:px-20 xl:px-32">
           <div className="flex flex-col-reverse items-center justify-center gap-20 md:flex-row">
             <div className="grid gap-4 text-center md:text-left">
               <h1 className="text-4xl font-bold text-slate-900 md:text-5xl xl:text-6xl xxl:text-7xl">
