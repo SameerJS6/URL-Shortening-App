@@ -7,15 +7,69 @@
   max-width: 2000px;
   margin-inline: auto;
 }
+input:focus {
+  outline: 2px solid transparent;
+}
 
+/* Main Styling  */
 body {
   font-family: "Poppins", sans-serif;
 }
-@media (min-width: 600px) {
-  .footer-column:nth-child(3) {
-    gap: 1rem;
+
+/* Navbar & Hamburger Menu  */
+@media (max-width: 600px) {
+  .open {
+    top: 7rem;
+    left: 50%;
+    opacity: 0;
+    position: fixed;
+    visibility: hidden;
+    transform: translate(-50%, -1rem);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  .active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0rem);
+  }
+  header[data-overlay="false"]::after,
+  header[data-overlay="true"]::after {
+    content: "";
+    inset: 0;
+    opacity: 0;
+    z-index: 9;
+    width: 100%;
+    position: fixed;
+    min-height: 100vh;
+    visibility: hidden;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.13),
+      rgba(0, 0, 0, 0.801)
+    );
+    transition: opacity 500ms ease-in-out;
+  }
+  header[data-overlay="true"]::after {
+    opacity: 1;
+    visibility: visible;
   }
 }
+
+@media (max-width: 768px) {
+  .copy-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    width: 100%;
+    height: 1px;
+    background: rgb(231, 231, 231);
+  }
+}
+
+/* Footer  */
 .footer-link:after {
   left: 0;
   content: "";
@@ -33,18 +87,8 @@ body {
   transform: scale(1);
   transform-origin: left;
 }
-@media (max-width: 768px) {
-  .copy-container::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 30%;
-    width: 100%;
-    height: 1px;
-    background: rgb(231, 231, 231);
+@media (min-width: 600px) {
+  .footer-column:nth-child(3) {
+    gap: 1rem;
   }
-}
-input:focus {
-  outline: 2px solid transparent;
 }
