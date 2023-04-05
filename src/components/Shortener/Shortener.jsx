@@ -55,7 +55,7 @@ export default function Shortener() {
   };
   return (
     <>
-      <div className="mx-auto mb-20 grid max-w-[1000px] gap-6">
+      <div className="mx-auto mb-20 grid max-w-[1000px] gap-6 md:mt-[-23%] lg:mb-28 lg:-mt-[17%] xl:-mt-[16%]">
         <div className="relative mx-auto w-full overflow-hidden rounded-lg bg-[#3b3054] p-6 font-bold shadow-md sm:py-8 md:p-8 md:py-10 lg:p-12">
           <div className="absolute inset-0">
             <picture>
@@ -81,23 +81,26 @@ export default function Shortener() {
                 onChange={(e) => setInputURL(e.target.value)}
               />
               <div className="flex flex-col gap-4 md:flex-row">
-                <button
-                  className="rounded-md bg-cyan-400 py-3 px-6 text-lg font-bold text-white transition-all duration-300 ease-in-out hover:bg-cyan-300 hover:shadow-sm "
-                  type="submit"
-                >
-                  Shorten It!
-                </button>
-                <button
-                  onClick={handleClear}
-                  className="rounded-md bg-red-500 py-3 px-6 text-lg font-bold text-white transition-all duration-300 ease-in-out hover:bg-red-400 hover:shadow-sm "
-                  type="button"
-                  disabled={resultURL.length === 0}
-                >
-                  {resultURL.length > 1 ? "Clear All" : "Clear"}
-                </button>
+                
+                  <button
+                    className="rounded-md bg-cyan-400 py-3 px-6 text-lg font-bold text-white transition-all duration-300 ease-in-out hover:bg-cyan-300 hover:shadow-sm "
+                    type="submit"
+                  >
+                    Shorten It!
+                  </button>
+                
+                  <button
+                    onClick={handleClear}
+                    className="rounded-md bg-red-500 py-3 px-6 text-lg font-bold text-white transition-all duration-300 ease-in-out hover:bg-red-400 hover:shadow-sm disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:shadow-none"
+                    type="button"
+                    disabled={resultURL.length === 0}
+                  >
+                    {resultURL.length > 1 ? "Clear All" : "Clear"}
+                  </button>
+                
               </div>
               <p
-                className={`absolute bottom-16 left-0 text-sm font-medium text-red-400 transition-all duration-300 ease-in-out sm:-bottom-7 md:-bottom-7 lg:-bottom-8 ${
+                className={`absolute bottom-32 left-0 text-sm font-medium text-red-400 transition-all duration-300 ease-in-out sm:-bottom-7 md:-bottom-7 lg:-bottom-8 ${
                   inputError
                     ? "translate-y-0 opacity-100"
                     : "translate-y-1 opacity-0"

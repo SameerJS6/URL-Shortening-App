@@ -25,7 +25,7 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-100">
-      <div className="main-container flex flex-col items-center justify-between gap-12 py-8 sm:items-center lg:flex-row lg:items-start lg:px-20 xl:px-32">
+      <div className="main-container flex flex-col items-center justify-between gap-12 py-8 sm:items-center lg:flex-row lg:items-start lg:px-20 xl:px-32 xl:py-20">
         <div className="text-4xl font-bold">
           <h2>Shortly</h2>
         </div>
@@ -38,25 +38,25 @@ export default function Footer() {
                   <h2 className="text-lg font-bold md:text-lg">{title}</h2>
                   <div className="flex flex-col items-center gap-3 text-sm opacity-80 lg:items-start">
                     <a
-                      className="footer-link relative w-fit rounded-lg transition-transform duration-300 ease-in-out hover:-translate-y-1"
+                      className="footer-links relative w-fit rounded-lg transition-transform duration-300 ease-in-out hover:-translate-y-1"
                       href=""
                     >
                       {link1}
                     </a>
                     <a
-                      className="footer-link relative w-fit transition-transform duration-300 ease-in-out hover:-translate-y-1"
+                      className="footer-links relative w-fit transition-transform duration-300 ease-in-out hover:-translate-y-1"
                       href=""
                     >
                       {link2}
                     </a>
                     <a
-                      className="footer-link relative w-fit transition-transform duration-300 ease-in-out hover:-translate-y-1"
+                      className="footer-links relative w-fit transition-transform duration-300 ease-in-out hover:-translate-y-1"
                       href=""
                     >
                       {link3}
                     </a>
                     <a
-                      className="footer-link relative w-fit transition-transform duration-300 ease-in-out hover:-translate-y-1"
+                      className="footer-links relative w-fit transition-transform duration-300 ease-in-out hover:-translate-y-1"
                       href=""
                     >
                       {link4}
