@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For the Chorme Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+  margin-block: 0.5rem;
+  border-radius: 100vmax;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100vmax;
+  background: rgb(59 48 84);
+}
+/* For the Mozilla Scrollbar  */
+@supports (scrollbar-color: purple black) {
+  *{
+    scrollbar-color: rgb(59 48 84) white;
+    scrollbar-width: thin;
+  }
+} 
+
 /* Utility Classes  */
 .main-container {
   max-width: 2000px;
@@ -70,7 +91,11 @@ body {
 }
 
 /* Footer  */
-.footer-link:after {
+.footer-links:after,
+.nav-links::after {
+  --line-color: white;
+  --duration: 150ms;
+
   left: 0;
   content: "";
   width: 100%;
@@ -80,12 +105,19 @@ body {
   transform: scaleX(0);
   border-radius: 100vmax;
   transform-origin: right;
-  background-color: white;
-  transition: transform 150ms ease-in-out;
+  background-color: var(--line-color);
+  transition: transform var(--duration) ease-in-out;
 }
-.footer-link:hover::after {
-  transform: scale(1);
-  transform-origin: left;
+.nav-links::after {
+  --duration: 250ms;
+  --line-color: rgb(59 48 84);
+}
+@media (hover: hover) {
+  .footer-links:hover::after,
+  .nav-links:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+  }
 }
 @media (min-width: 600px) {
   .footer-column:nth-child(3) {
