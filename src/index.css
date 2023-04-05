@@ -17,11 +17,11 @@
 }
 /* For the Mozilla Scrollbar  */
 @supports (scrollbar-color: purple black) {
-  *{
+  * {
     scrollbar-color: rgb(59 48 84) white;
     scrollbar-width: thin;
   }
-} 
+}
 
 /* Utility Classes  */
 .main-container {
@@ -35,6 +35,7 @@ input:focus {
 /* Main Styling  */
 body {
   font-family: "Poppins", sans-serif;
+  animation: fade-in 1s ease-in-out;
 }
 
 /* Navbar & Hamburger Menu  */
@@ -122,5 +123,19 @@ body {
 @media (min-width: 600px) {
   .footer-column:nth-child(3) {
     gap: 1rem;
+  }
+}
+/* Animation  */
+.fade-in {
+  animation: fade-in 500ms ease-in-out;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
